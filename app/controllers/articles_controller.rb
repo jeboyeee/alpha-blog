@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
   end
   
   def create
-    
+    #render plain: params[:article].inspect (to test what is recieve)
     @article = Article.new(article_params)
     if @article.save
       flash[:notice] = "Article was successfully created"
