@@ -18,8 +18,11 @@ class ArticlesController < ApplicationController
   end
   
   def create
+    #control d to stop the server from hangin
+    debugger 
     #render plain: params[:article].inspect (to test what is recieve)
     @article = Article.new(article_params)
+    @article.user = User.first
     if @article.save
       flash[:success] = "Article was successfully created"
       redirect_to article_path(@article)
