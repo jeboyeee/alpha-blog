@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
   
   def create
     #control d to stop the server from hangin
-    debugger 
+    #debugger 
     #render plain: params[:article].inspect (to test what is recieve)
     @article = Article.new(article_params)
     #@article.user = User.first
