@@ -2,8 +2,6 @@
 
 <!--<p>-->
 
-
-
 <h2 align="center">Title: <%= @article.title %></h2> 
  <div class="well col-xs-8 col-xs-offset-2">
    
@@ -28,6 +26,13 @@
    <h4 class="center description"><strong>Description:</strong></h4>
 <hr>
   <%= simple_format(@article.description) %>
+  <!--section 7 L148-->
+  <% if @article.categories.any? %>
+  <!--check the error kahit walang render-->
+   <p>Categories: <%= render @article.categories %></p>
+  <% end %>
+  <!--section 7 L148-->
+  
   <div class="article-actions">
     
     <!--< if logged_in? && current_user == @article.user %>-->

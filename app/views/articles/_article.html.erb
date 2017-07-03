@@ -15,7 +15,11 @@
         </small>
         </div>
       </div>
-      
+      <!--section 7 L148-->
+      <% if article.categories.any? %>
+       <p>Categories: <%= render article.categories %></p>
+      <% end %>
+      <!--section 7 L148-->
       <!--< if logged_in? && current_user == article.user %>-->
       <% if logged_in? && (current_user == article.user || current_user.admin?) %>
         <div class="article-actions">
