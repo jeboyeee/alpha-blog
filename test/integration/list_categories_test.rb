@@ -1,6 +1,7 @@
 require 'test_helper'
-
-class CreateCategoriesTest < ActionDispatch::IntegrationTest
+#due to the class same name as create_categories_test it will run both, change books to sports it will have an error due to duplicate
+#class CreateCategoriesTest < ActionDispatch::IntegrationTest
+class ListCategoriesTest < ActionDispatch::IntegrationTest
   
   def setup
     @category = Category.create(name: "books")
